@@ -12,17 +12,19 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    min-height: 100vh;
     font-family: "Hanken Grotesk", "Hanken", san-serif;
 }
 
 section {
     display: flex;
+    flex-wrap: wrap;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .result {
@@ -32,8 +34,7 @@ section {
     align-items: center;
     text-align: center;
     padding: 1rem 1rem 4rem 1rem;
-    width: 50%;
-    border-radius: 3rem;
+    border-radius: 0 0 3rem 3rem;
     outline: none;
     border: none;
     color: #fff;
@@ -87,8 +88,8 @@ section {
 }
 
 .summary {
+    width: 100%;
     padding: 2rem 0;
-    width: 50%;
 }
 
 .inner-container {
@@ -171,13 +172,35 @@ article {
 
 button {
     border-radius: 2rem;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     width: 80%;
     color: #fff;
     border: none;
     background-color: hsl(224, 30%, 27%);
 }
 
+
+
+/*-------------------DESKTOP -----------*/
+
+
+@media (min-width: 768px) {
+    body {
+        min-height: 100vh;
+    }
+}
+@media (min-width: 1440px) {
+
+    .result {
+        width: 50%;
+        border-radius: 3rem;
+    }
+
+    .summary {
+        width: 50%;
+    }
+
+}
 
 
 
